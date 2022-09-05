@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>HTML5 Canvas</title>
-</head>
-<body>
-<canvas id="draw" width="800" height="800"></canvas>
-<script>
-</script>
-
-<style>
-  html, body {
-    margin: 0;
-  }
-</style>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML5 Canvas</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+      }
+      canvas {
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="draw" width="800" height="800"></canvas>
+    <script>
+      let canvas = document.querySelector("#draw");
+      let drawing = false;
+      canvas.addEventListener("mousedown", (e) => {
+        console.log(e);
+      });
+      canvas.addEventListener("mousemove", (d) => {
+        console.log("draw");
+      });
+    </script>
+  </body>
 </html>
